@@ -1,7 +1,10 @@
 package models
 
+import "database/sql"
+
 // Event event
 type Event struct {
+	Model
 	ID          int      `json:"id"`
 	Name        string   `json:"name"`
 	Tags        []string `json:"tags"`
@@ -12,35 +15,22 @@ type Event struct {
 // Events all events
 type Events []Event
 
-// Name event name
-func (e Event) Name() {
+// Create blah
+func (e *Event) Create(db *sql.DB) {
+	// SQL STUFF
+}
 
-	if e.Name == nil {
-		return ""
-	}
-
-	return e.Name()
+// Read blah
+func (e *Event) Read() {
 
 }
 
-// Tags event tags
-func (e Event) Tags() {
-
-	if e.Tags == nil {
-		return ""
-	}
-
-	return e.Tags()
+// Update blah
+func (e *Event) Update() {
 
 }
 
-// Description event description
-func (e Event) Description() {
-
-	if e.Description == nil {
-		return ""
-	}
-
-	return e.Description
+// Delete blah
+func (e *Event) Delete() {
 
 }

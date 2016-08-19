@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"database/sql"
+	"fmt"
 	"net/http"
 )
 
@@ -9,22 +10,22 @@ import (
 func EventIndex(db *sql.DB) http.Handler {
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		// pull up model things
+		fmt.Println("HIT HIT HIT")
 	})
 
 }
 
 // EventCreate GET /event/create
-func EventCreate(db *sql.DB) {
+func EventCreate(db *sql.DB) http.Handler {
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		// pull up model things
+
 	})
 
 }
 
 // EventStore POST /event
-func EventStore(db *sql.DB) {
+func EventStore(db *sql.DB) http.Handler {
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// pull up model things
@@ -33,7 +34,7 @@ func EventStore(db *sql.DB) {
 }
 
 // EventShow GET /event/{id}
-func EventShow(db *sql.DB) {
+func EventShow(db *sql.DB) http.Handler {
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// pull up model things
@@ -42,7 +43,7 @@ func EventShow(db *sql.DB) {
 }
 
 // EventEdit GET /event/{id}/edit
-func EventEdit(db *sql.DB) {
+func EventEdit(db *sql.DB) http.Handler {
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// pull up model things
@@ -51,7 +52,7 @@ func EventEdit(db *sql.DB) {
 }
 
 // EventUpdate PUT/PATCH /event/{id}
-func EventUpdate(db *sql.DB) {
+func EventUpdate(db *sql.DB) http.Handler {
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// pull up model things
@@ -60,7 +61,7 @@ func EventUpdate(db *sql.DB) {
 }
 
 // EventDestroy DELETE /event/{id}
-func EventDestroy(db *sql.DB) {
+func EventDestroy(db *sql.DB) http.Handler {
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// pull up model things

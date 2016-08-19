@@ -1,3 +1,5 @@
+//package models
+
 package models
 
 type Speaker struct {

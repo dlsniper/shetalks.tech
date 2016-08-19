@@ -1,21 +1,23 @@
 package main
 
 import (
-	"fmt"
+	"database/sql"
 	"log"
 	"net/http"
 
-	"github.com/amy/shetalks.tech/config/database"
+	"github.com/amy/shetalks.tech/routes"
 )
 
 func main() {
 
-	router := NewRouter()
+	var db *sql.DB
+
+	router := routes.NewRouter(db)
 
 	log.Fatal(http.ListenAndServe(":8080", router))
 
-	fmt.Println("blahblah\n")
+	//fmt.Println("blahblah\n")
 
-	database.InitDB()
+	//database.InitDB()
 
 }
