@@ -6,7 +6,8 @@ import (
 	//"net/http"
 
 	//"github.com/amy/shetalks.tech/routes"
-	"github.com/amy/shetalks.tech/config/database"
+	//"github.com/amy/shetalks.tech/config/database"
+	"github.com/amy/shetalks.tech/models"
 )
 
 func main() {
@@ -19,6 +20,8 @@ func main() {
 
 	//fmt.Println("blahblah\n")
 
-	database.InitDB(db)
+	//database.InitDB(db)
+
+	event := models.CreateEvent(db, "Event", "Description", ["speaker1", "speaker2"]string)
 
 }
